@@ -1,0 +1,19 @@
+﻿<Window x:Class="PopWithOAuth2Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PopWithOAuth2Wpf"
+        mc:Ignorable="d"
+        DataContext="{Binding Source={StaticResource Locator}, Path=MainViewModel}"
+        Title="MainWindow" Height="360" Width="480">
+    <Grid Height="347" VerticalAlignment="Top">
+        <Button x:Name="buttonGmail" Content="Gmail" HorizontalAlignment="Left" Margin="384,261,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,3.008" Width="54"
+                Command="{Binding GoogleCommand}"/>
+        <Button x:Name="buttonExchange" Content="Exchange" HorizontalAlignment="Left" Margin="384,286,0,0" VerticalAlignment="Top" Width="74"
+                Command="{Binding ExchangeCommand}"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="358" Height="296" AcceptsReturn="True"
+                 Text="{Binding Path=LogMessage, UpdateSourceTrigger=PropertyChanged}"
+                 />
+    </Grid>
+</Window>
