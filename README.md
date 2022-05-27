@@ -17,4 +17,4 @@ AzureAD・Google Developer Console の仕様・UI が執筆時と変わってい
 ## 設定手順・解説
 
 - [Exchange](./Exchange.md)
-- [Gmail](./Gmail.md)
+- [Gmail](./Google.md)
