@@ -57,6 +57,9 @@ namespace PopWithOAuth2Wpf
             ExchangeCommand = new ExchangeCommandImpl(this);
         }
 
+        /// <summary>
+        /// Google テストコマンド
+        /// </summary>
         class GoogleCommandImpl : ICommand
         {
             private MainViewModel _vm;
@@ -74,6 +77,7 @@ namespace PopWithOAuth2Wpf
 
             public async Task ExecuteAsync(object parameter)
             {
+                // Google POP3サーバ設定
                 _vm._Pop3.Pop3Config = new Pop3Config()
                 {
                     Host = "pop.gmail.com",
@@ -117,6 +121,9 @@ namespace PopWithOAuth2Wpf
             }
         }
 
+        /// <summary>
+        /// Exchangeテストコマンド
+        /// </summary>
         class ExchangeCommandImpl : ICommand
         {
             private MainViewModel _vm;
@@ -134,6 +141,7 @@ namespace PopWithOAuth2Wpf
 
             public async Task ExecuteAsync(object parameter)
             {
+                // Exchange POP3 サーバ設定
                 _vm._Pop3.Pop3Config = new Pop3Config()
                 {
                     Host = "outlook.office365.com",

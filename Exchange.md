@@ -33,7 +33,7 @@
 
 ## サンプルアプリ
 
-[App.xaml.cs の Exchange OAuth 認証設定部分](App.xaml.cs#L43-L58) に作成したクライアント ID・テナント ID・スコープを設定し、実行する。
+[App.xaml.cs の Exchange OAuth 認証設定部分](App.xaml.cs#L43-L59) に作成したクライアント ID・テナント ID・スコープを設定し、実行する。
 
 「Exchange」ボタンを押すとブラウザで OAuth 同意ページが開き、続行ボタンを押すと許可が与えられ、POP でログイン・メールボックスにアクセスする。
 

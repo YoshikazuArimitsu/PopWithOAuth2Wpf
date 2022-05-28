@@ -27,6 +27,7 @@ namespace PopWithOAuth2Wpf
 
         private void ConfigureServices(ServiceCollection services)
         {
+            /// Google OAuth2 サービス初期化
             services.AddScoped((p) =>
             {
                 return new GoogleOAuthConfig()
@@ -37,9 +38,9 @@ namespace PopWithOAuth2Wpf
                     Account = "yarimit@gmail.com"
                 };
             });
-
             services.AddSingleton<GoogleOAuthService>();
 
+            /// Exchange OAuth2 サービス初期化
             services.AddScoped((p) =>
             {
                 return new ExchangeOAtuhConfig()
@@ -60,10 +61,7 @@ namespace PopWithOAuth2Wpf
             services.AddSingleton<ExchangeOAuthService>();
 
             services.AddSingleton<Pop3Service>();
-
-
             services.AddSingleton<MainViewModel>();
-
             services.AddSingleton<MainWindow>();
         }
 
